@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe Name" />
+        <input type="text" name="city" placeholder="Cafe City Location" />
+        <button>Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyCiaZld7fRJdlBHNcHl45bqu2gjqmy8dms",
+        authDomain: "lec-firestore-cafe.firebaseapp.com",
+        databaseURL: "https://lec-firestore-cafe.firebaseapp.com",
+        projectId: "lec-firestore-cafe",
+        storageBucket: "lec-firestore-cafe.appspot.com",
+        messagingSenderId: "259658720460",
+        appId: "1:259658720460:web:72679c957196d64a54ce69",
+        measurementId: "G-0WWGW0ECZS",
+      };
+
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
